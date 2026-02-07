@@ -32,6 +32,7 @@ screenshots_private/
 
 node_modules/
 pycache/
+**pycache**/
 *.pyc
 
 *.key
