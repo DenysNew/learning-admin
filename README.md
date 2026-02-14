@@ -1,4 +1,6 @@
 # Learning Admin Lab
+Aspiring System Administrator and SOC Analyst with hands-on Linux lab experience focused on system analysis, log investigation, and security fundamentals
+
 
 This repository is my personal hands-on lab focused on learning system administration, Linux, security, and infrastructure fundamentals.
 
