@@ -127,6 +127,14 @@ Through this lab, I have gained practical experience with:
 - Working with system services and processes
 - Understanding system startup and configuration mechanisms
 
+### Windows Administration
+
+* Managing local users and permissions
+* Understanding Windows services and system logs
+* Basic Active Directory concepts
+* System configuration and troubleshooting
+* Windows security fundamentals
+
 ### System and Process Analysis
 
 - Identifying running processes using tools such as `ps aux`
