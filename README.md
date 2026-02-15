@@ -14,7 +14,10 @@ This lab reflects my progression in understanding how both Linux and Windows sys
 
 The primary objectives of this lab are:
 
-- Develop practical Linux system administration skills
+- Develop practical Linux and Windows system administration skills
+- Gain hands-on experience with system configuration, services, and troubleshooting
+- Learn to analyze system logs in both Linux and Windows environments
+- Understand infrastructure, networking, and security fundamentals
 - Understand system processes, services, and internal operating system mechanisms
 - Learn how to analyze system logs and detect abnormal or suspicious activity
 - Gain hands-on experience working with SSH, cron jobs, and system configurations
