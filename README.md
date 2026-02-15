@@ -1,12 +1,12 @@
 # Learning Admin Lab
-Aspiring System Administrator and SOC Analyst with hands-on Linux lab experience focused on system analysis, log investigation, and security fundamentals
 
+Aspiring System Administrator and SOC Analyst with hands-on Linux and Windows lab experience focused on system administration, log analysis, security fundamentals, and infrastructure troubleshooting.
 
-This repository is my personal hands-on lab focused on learning system administration, Linux, security, and infrastructure fundamentals.
+This repository is my personal hands-on lab built to develop practical skills in both Linux and Windows system administration, cybersecurity, and IT infrastructure.
 
-The main goal of this project is to build practical skills, document my learning process, and create a structured technical portfolio demonstrating real-world system analysis, troubleshooting, and administration workflows.
+The main goal of this project is to build real-world technical skills, document hands-on experience, and create a structured technical portfolio demonstrating system administration workflows, troubleshooting methodology, and security analysis.
 
-This repository reflects my progression in understanding how operating systems work internally, how to analyze system behavior, and how to identify both normal and abnormal activity.
+This lab reflects my progression in understanding how both Linux and Windows systems operate internally, how to analyze system behavior, investigate logs, and identify abnormal or suspicious activity.
 
 ---
 
