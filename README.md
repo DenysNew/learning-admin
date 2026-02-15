@@ -46,7 +46,7 @@ This repository is organized to reflect different technical domains and learning
 
 learning-admin/
 │
-├── 00-meta/
+├── 00-meta/                # Knowledge management and meta documentation
 │   ├── glossary.md        # My terminology glossary
 │   ├── opsec.md           # Security and privacy guidelines
 │   ├── roadmap.md         # Learning roadmap
@@ -66,6 +66,7 @@ learning-admin/
 │   └── notes/
 │
 └── 40-toolbox/            # Cheatsheets, commands, and tools
+
 
 Each directory contains documentation, notes, commands, and artifacts related to specific technical topics.
 
