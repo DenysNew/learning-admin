@@ -40,36 +40,36 @@ The lab simulates real-world infrastructure environments, allowing safe experime
 
 ---
 
-## Repository Structure
+## 📁 Repository Structure
 
-This repository is organized to reflect different technical domains and learning areas:
+```
 
-learning-admin/  
-│  
-├── 00-meta/                # Knowledge management and meta documentation     
-│   ├── glossary.md        # My terminology glossary    
-│   ├── opsec.md           # Security and privacy guidelines     
-│   ├── roadmap.md         # Learning roadmap    
-│   └── templates/         # Templates for notes, reports, and labs    
-│  
-├── 10-admin/              # System administration     
-│   ├── linux/    
-│   ├── windows/    
-│   └── artifacts/    
-│  
-├── 20-pentest/            # Pentesting and security    
-│   ├── methodology.md     # My testing methodology    
-│   └── labs/    
-│  
-├── 30-architecture/       # System architecture and design    
-│   ├── diagrams/     
-│   └── notes/    
-│  
-└── 40-toolbox/            # Cheatsheets, commands, and tools    
+learning-admin/
+│
+├── 00-meta/               # Knowledge management and meta documentation
+│   ├── glossary.md        # My terminology glossary 
+│   ├── opsec.md           # Security and privacy guidelines
+│   ├── roadmap.md         # Learning roadmap
+│   └── templates/         # Templates for notes, reports, and labs
+│
+├── 10-admin/              # System administration 
+│   ├── windows/
+│   └── artifacts/
+│
+├── 20-pentest/            # Pentesting and security 
+│   ├── methodology.md     # My testing methodology
+│   └── labs/
+│
+├── 30-architecture/       # System architecture and design
+│   ├── diagrams/
+│   └── notes/
+│
+└── 40-toolbox/            # Cheatsheets, commands, and tools  
 
 
 Each directory contains documentation, notes, commands, and artifacts related to specific technical topics.
 
+```
 ---
 
 ## Topics Covered
