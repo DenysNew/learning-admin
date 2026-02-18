@@ -262,4 +262,4 @@ SUID позволяет выполнять файл с правами владе
 
 Практическая демонстрация и артефакты:
 
-[linux-file-permissions.md](./file-permissions.md)
+[linux-file-permissions.md](./linux-file-permissions.md)
