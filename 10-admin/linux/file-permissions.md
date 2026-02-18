@@ -254,3 +254,12 @@ Symbolic:
     -rwsr-xr-x
 
 SUID позволяет выполнять файл с правами владельца (например root).
+
+
+---
+
+## Практика
+
+Практическая демонстрация и артефакты:
+
+[linux-file-permissions.md](./file-permissions.md)
