@@ -17,6 +17,8 @@
 
 В лаборатории используются два сетевых сегмента:
 
+---
+
 ### 1. NAT (доступ в интернет)
 
 Назначение:
@@ -29,9 +31,10 @@
 Характеристики:
 
 - предоставляется VirtualBox автоматически
-- типичная сеть: `10.0.2.0/24`
+- сеть: `10.0.2.0/24`
 - шлюз: `10.0.2.2`
 - IP назначается через DHCP VirtualBox
+- используется как default route
 
 ---
 
@@ -49,6 +52,25 @@
 - полностью изолирована от внешней сети
 - доступ только между VM внутри `lab-net`
 - интернет отсутствует
+- подсеть: `10.10.10.0/24`
+
+---
+
+## Политика адресации
+
+### Статические IP (lab-net)
+
+- `10.10.10.10` — srv-dc01 (Domain Controller, DNS, DHCP)
+- `10.10.10.50` — kali-attacker01
+
+### DHCP-пул (lab-net)
+
+- `10.10.10.100 – 10.10.10.200`
+- раздаётся Windows Server (роль DHCP)
+
+### NAT-сегмент
+
+- все машины получают IP автоматически от VirtualBox
 
 ---
 
@@ -56,58 +78,14 @@
 
 Все виртуальные машины используют:
 
-- Adapter 1: Internal Network (`lab-net`)
-- Adapter 2: NAT
+- Adapter 1: NAT (Internet)
+- Adapter 2: Internal Network (`lab-net`)
 
----
+Принцип маршрутизации:
 
-## Артефакты: настройки сети VirtualBox
-
-### Kali Linux
-
-Internal Network:
-
-![kali lab-net](../../images/lab-virtualization/vm-settings/kali-attacker01-network-lab-net.png)
-
-NAT:
-
-![kali nat](../../images/lab-virtualization/vm-settings/kali-attacker01-network-nat.png)
-
----
-
-### Windows Server (srv-dc01)
-
-Internal Network:
-
-![srv-dc01 lab-net](../../images/lab-virtualization/vm-settings/srv-dc01-network-lab-net.png)
-
-NAT:
-
-![srv-dc01 nat](../../images/lab-virtualization/vm-settings/srv-dc01-network-nat.png)
-
----
-
-### Ubuntu Server
-
-Internal Network:
-
-![ubuntu lab-net](../../images/lab-virtualization/vm-settings/ubuntu-server-network-lab-net.png)
-
-NAT:
-
-![ubuntu nat](../../images/lab-virtualization/vm-settings/ubuntu-server-network-nat.png)
-
----
-
-### Windows Client (ws-client01)
-
-Internal Network:
-
-![ws-client lab-net](../../images/lab-virtualization/vm-settings/ws-client01-network-labnet.png)
-
-NAT:
-
-![ws-client nat](../../images/lab-virtualization/vm-settings/ws-client01-network-nat.png)
+- Default Gateway указывается только через NAT
+- На внутреннем интерфейсе gateway не указывается
+- DNS внутри домена — 10.10.10.10
 
 ---
 
@@ -138,24 +116,32 @@ NAT:
 ---
 
 ## Итоговая архитектура
+```
+                INTERNET
+                    |
+             [VirtualBox NAT]
+                    |
+             10.0.2.0/24
+                    |
+    ---------------------------------
+    |               |              |
+  Kali           srv-dc01      Ubuntu
+                    |
+               ws-client01
+                    
+    (Internal Network: 10.10.10.0/24)
 
-            INTERNET
-               |
-          VirtualBox NAT
-               |
-   +-----------+-----------+
-   |           |           |
-  Kali      Windows      Ubuntu
-               |
-            Windows Client
 
 
-
+```
 ## Итог
 
 Лабораторная сеть успешно настроена:
 
-- internet доступ через NAT — работает
+- интернет доступ через NAT — работает
 - внутренняя сеть lab-net — настроена
 - виртуальные машины подключены корректно
-- конфигурация зафиксирована артефактами
+- DHCP работает
+- статические IP закреплены
+- таблица маршрутизации корректна
+- тест reboot пройден
