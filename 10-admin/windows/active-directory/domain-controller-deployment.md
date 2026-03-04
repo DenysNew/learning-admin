@@ -143,9 +143,8 @@ DC имеет IP `10.10.10.10` в lab-net (и может иметь второй
 - DHCP Server: `10.10.10.10`
 - DNS Servers: `10.10.10.10`
 
-![Client ipconfig DHCP success](artifacts/domain-controller/client-ipconfig-dhcp-success.png)
+![Client ipconfig DHCP success](artifacts/domain-controller/domain-controller-ipconfig.png)
 
-> Важно: на скрине лучше показывать именно адаптер **lab-net** (а не NAT), чтобы не было путаницы.
 
 ---
 
