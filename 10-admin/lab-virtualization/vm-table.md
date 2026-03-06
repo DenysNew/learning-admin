@@ -15,12 +15,13 @@
 
 ## Таблица виртуальных машин
 
-| VM Name | Hostname | OS | Role | IP (lab-net) | Тип адресации (lab-net) | NAT | Internet |
-|----------|-----------|----------------------|-------------------------|---------------|--------------------------|------|----------|
-| kali-attacker01 | kali-attacker01 | Kali Linux | Attacker machine | 10.10.10.50 | Static | DHCP (10.0.2.x) | Yes |
-| srv-dc01 | srv-dc01 | Windows Server 2022 | Domain Controller | 10.10.10.10 | Static | DHCP (10.0.2.x) | Yes |
-| ubuntu-server | ubuntu-server | Ubuntu Server | Linux server | DHCP (10.10.10.100+) | DHCP | DHCP (10.0.2.x) | Yes |
-| ws-client01 | ws-client01 | Windows 11 | Client machine | DHCP (10.10.10.100+) | DHCP | DHCP (10.0.2.x) | Yes |
+| VM Name        | Hostname      | OS                  | Role                     | IP (lab-net)            | Тип адресации | NAT        | Internet |
+|---------------|---------------|---------------------|--------------------------|--------------------------|---------------|------------|----------|
+| srv-dc01      | srv-dc01      | Windows Server 2022 | Domain Controller / DNS / DHCP | 10.10.10.10 | Static | DHCP (10.0.2.x) | Yes |
+| ws-admin01    | ws-admin01    | Windows 11          | Admin Workstation        | DHCP (10.10.10.100+)     | DHCP          | DHCP       | Yes |
+| ws-client01   | ws-client01   | Windows 11          | Domain Client            | DHCP (10.10.10.100+)     | DHCP          | DHCP       | Yes |
+| ubuntu-server | ubuntu-server | Ubuntu Server       | Linux Server             | DHCP (10.10.10.100+)     | DHCP          | DHCP       | Yes |
+| kali-attacker01 | kali-attacker01 | Kali Linux      | Attacker Machine         | 10.10.10.50              | Static        | DHCP       | Yes |
 
 ---
 
