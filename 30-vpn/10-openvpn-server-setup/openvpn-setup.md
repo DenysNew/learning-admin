@@ -264,7 +264,6 @@ sudo systemctl status openvpn@server --no-pager -l
 
 Следующие этапы вынесены в отдельные файлы:
 
-* настройка клиента OpenVPN: `../20-openvpn-client/client-setup.md`
-* настройка сетевого доступа (IP forwarding, NAT, маршрутизация): `../30-network-access/network-access.md`
-
+* настройка клиента OpenVPN: [Client setup.md](../20-openvpn-client/client-setup.md)
+* настройка сетевого доступа (IP forwarding, NAT, маршрутизация): [Client setup.md](../20-openvpn-client/client-setup.md)
 ---
