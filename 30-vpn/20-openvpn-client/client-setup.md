@@ -1,10 +1,12 @@
 ## OpenVPN Client Setup
 
 ### Overview (EN)
-This section covers the creation of a single OpenVPN client configuration using Easy-RSA certificates. The client setup is used to verify tunnel establishment and connectivity to the internal LAB network (10.10.10.0/24). This is a basic certificate-based configuration, which will be extended later with centralized authentication using RADIUS.
+
+This section covers the creation of a single OpenVPN client configuration using Easy-RSA certificates. The client setup is used to verify tunnel establishment and remote connectivity to the internal LAB network (10.10.10.0/24) through NAT and port forwarding. This is a basic certificate-based configuration, which will be extended later with centralized authentication using RADIUS.
 
 ### Описание (RU)
-В данном разделе настраивается один клиент OpenVPN с использованием сертификатов Easy-RSA. Конфигурация используется для проверки установления туннеля и доступа к внутренней LAB сети (10.10.10.0/24). Это базовая схема с сертификатами, которая в дальнейшем будет расширена с использованием централизованной аутентификации через RADIUS.
+
+В данном разделе настраивается один клиент OpenVPN с использованием сертификатов Easy-RSA. Конфигурация используется для проверки установления туннеля и удалённого доступа к внутренней LAB сети (10.10.10.0/24) через NAT и проброс портов. Это базовая схема с сертификатами, которая в дальнейшем будет расширена с использованием централизованной аутентификации через RADIUS.
 
 ## 1. Генерация client key и CSR
 
@@ -62,7 +64,7 @@ nano client1.ovpn
 * параметр client указывает режим клиента
 * dev tun — используется туннельный интерфейс
 * proto udp — протокол подключения
-* remote 10.10.10.10 1194 — IP-адрес и порт OpenVPN сервера
+* remote 192.168.0.80 1194 — адрес и порт VPN сервера, доступный клиенту
 * остальные параметры отвечают за стабильность соединения и безопасность
 
 **Результат:**
