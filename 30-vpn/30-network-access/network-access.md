@@ -8,20 +8,27 @@ Configure routing and NAT on an OpenVPN server running on a virtual machine (Vir
 
 ## Схема сети
 
-Laptop (Client)
-    |
-    | UDP 1194
-    ↓
-Host (Windows / NAT)
-    |
-    | Port Forwarding
-    ↓
-Ubuntu Server (OpenVPN)
-    |
-    | Internal Network (lab-net)
-    ↓
-LAB Network (10.10.10.0/24)
-
++-------------------+
+|   Laptop (Client) |
++-------------------+
+          |
+          | UDP 1194
+          v
++------------------------+
+| Host (Windows / NAT)   |
++------------------------+
+          |
+          | Port Forwarding
+          v
++---------------------------+
+| Ubuntu Server (OpenVPN)   |
++---------------------------+
+          |
+          | Internal Network (lab-net)
+          v
++-------------------------------+
+| LAB Network (10.10.10.0/24)   |
++-------------------------------+
 **Пояснение:**
 
 * клиент подключается к VPN серверу через хост-машину
@@ -101,9 +108,9 @@ OpenVPN сервер успешно запущен и работает чере�
 Действие:
 
 Открыть конфигурационный файл сервера:
-
+```bash
 sudo nano /etc/openvpn/server/server.conf
-
+```
 Добавить строку:
 
 push "route 10.10.10.0 255.255.255.0"
