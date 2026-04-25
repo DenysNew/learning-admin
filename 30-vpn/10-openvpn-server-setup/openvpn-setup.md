@@ -13,7 +13,7 @@ Install OpenVPN and Easy-RSA on Ubuntu Server, configure certificate-based authe
 
 Устанавливаем необходимые пакеты на Ubuntu Server:
 
-```
+```bash
 sudo apt update
 sudo apt install openvpn easy-rsa
 ```
@@ -51,7 +51,7 @@ ls
 
 Инициализируем инфраструктуру открытых ключей (PKI):
 
-```bash id="e5n8fz"
+```bash 
 cd /home/denys/easy-rsa
 ./easyrsa init-pki
 ```
@@ -71,7 +71,7 @@ cd /home/denys/easy-rsa
 
 Создаём центр сертификации (Certificate Authority):
 
-```bash id="9y4k7f"
+```bash 
 ./easyrsa build-ca
 ```
 
