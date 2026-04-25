@@ -7,7 +7,7 @@ Configure routing and NAT on an OpenVPN server running on a virtual machine (Vir
 Настроить маршрутизацию и NAT на OpenVPN-сервере, работающем на виртуальной машине (VirtualBox host), чтобы внешний клиент (ноутбук) мог получать доступ к внутренней лабораторной сети (10.10.10.0/24) через VPN (10.8.0.0/24).
 
 ## Схема сети
-
+```
 +-------------------+
 |   Laptop (Client) |
 +-------------------+
@@ -29,6 +29,7 @@ Configure routing and NAT on an OpenVPN server running on a virtual machine (Vir
 +-------------------------------+
 | LAB Network (10.10.10.0/24)   |
 +-------------------------------+
+```
 **Пояснение:**
 
 * клиент подключается к VPN серверу через хост-машину
