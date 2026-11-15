@@ -1,39 +1,12 @@
-```md
-# 10-admin — Администрирование
+# Administracja systemami
 
-Этот раздел посвящён изучению системного администрирования (Linux и Windows) как основы для безопасности и пентеста.
+Wykonane ćwiczenia i ich dokumentacja:
 
-## 🎯 Цели раздела
-В этом разделе я учусь:
-- понимать, как устроены операционные системы;
-- управлять пользователями, правами и сервисами;
-- работать с логами и процессами;
-- настраивать базовые сетевые и системные механизмы;
-- мыслить как администратор, прежде чем действовать как пентестер.
+- [VirtualBox: maszyny, sieć i DHCP](lab-virtualization/README.md)
+- [Windows Server: wdrożenie domeny](windows/active-directory/domain-controller-deployment.md)
+- [Windows: stacja administratora i RSAT](windows/admin-workstation-setup.md)
+- [Windows: diagnostyka DHCP po promocji do DC](windows/active-directory/dhcp-not-working-after-dc-promotion.md)
+- [Linux: uprawnienia i pliki SUID](linux/linux-file-permissions.md)
+- [Windows: odzyskanie dostępu do własnej VM](windows/password-recovery-utilman-exploit.md)
 
-## Структура
-
-10-admin/
-├── README.md        # ← этот файл
-├── linux/
-│   ├── 01-users-groups.md
-│   ├── 02-permissions-acl.md
-│   ├── 03-systemd-logs.md
-│   └── artifacts/
-└── windows/
-    ├── 01-local-users-gpo.md
-    ├── 02-services-logs.md
-    └── artifacts/
-
-## Как я работаю с материалами
-Для каждой темы я стараюсь оставлять:
-- 📘 **Заметку (.md)** — что я изучил, шаги и выводы;
-- 📁 **Артефакты** — скриншоты, логи, конфиги в папке `artifacts/`;
-- ✅ минимум одно: *“что я понял”*;
-- 🔁 минимум одно: *“что нужно повторить/улучшить”*.
-
-## Связь с пентестом
-Администрирование — это фундамент для пентеста:
-- Без понимания **как должно работать**, сложно понять **почему это уязвимо**.
-- Многие атаки эксплуатируют именно неправильную настройку администрирования.
-```
+[Wszystkie cztery obszary](../README.md) · [Plan kolejnych ćwiczeń](../00-meta/roadmap.md)
