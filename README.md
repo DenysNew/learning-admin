@@ -1,335 +1,56 @@
-# Learning Admin Lab
+# Learning Admin
 
-Aspiring System Administrator and SOC Analyst with hands-on Linux and Windows lab experience focused on system administration, log analysis, security fundamentals, and infrastructure troubleshooting.
+Dokumentacja mojej praktyki w administracji IT: konfiguracje, rozwiązywanie problemów i zrzuty ekranu z wykonanych ćwiczeń. Główne środowisko to VirtualBox, Windows Server, Ubuntu oraz Microsoft 365.
 
-This repository is my personal hands-on lab built to develop practical skills in both Linux and Windows system administration, cybersecurity, and IT infrastructure.
+**[Portfolio — projekty i CV](https://portfolio.appli-lab.pl/#admin)**
 
-The main goal of this project is to build real-world technical skills, document hands-on experience, and create a structured technical portfolio demonstrating system administration workflows, troubleshooting methodology, and security analysis.
+## Od czego zacząć
 
-This lab reflects my progression in understanding how both Linux and Windows systems operate internally, how to analyze system behavior, investigate logs, and identify abnormal or suspicious activity.
+| Obszar | Co pokazuje dokumentacja | Przykład |
+| --- | --- | --- |
+| Windows Server i Active Directory | Kontroler domeny, OU, użytkownicy, grupy, RSAT, DNS i DHCP | [Naprawa DHCP po promocji serwera do DC](10-admin/windows/active-directory/dhcp-not-working-after-dc-promotion.md) |
+| Microsoft 365, Entra ID i Intune | Synchronizacja tożsamości, licencje, MFA i dostęp zależny od zgodności urządzenia | [Trzy scenariusze Conditional Access](20-microsoft365/30-security/conditional-access-compliant-device/conditional-access-compliant-device.md) |
+| Linux | Uprawnienia plików, właściciele i analiza plików SUID | [Praktyka z czterema zrzutami](10-admin/linux/linux-file-permissions.md) |
+| Sieci i dostęp zdalny | Sieć lab-net, OpenVPN, certyfikaty, routing i NAT | [Dostęp przez VPN do sieci laboratoryjnej](30-vpn/30-network-access/network-access.md) |
 
----
+## Dokumentacja według obszaru
 
-## Objectives
+### Windows Server i Active Directory
 
-The primary objectives of this lab are:
+- [Wdrożenie kontrolera domeny](10-admin/windows/active-directory/domain-controller-deployment.md)
+- [Osobna stacja administratora i RSAT](10-admin/windows/admin-workstation-setup.md)
+- [OU, konta i grupy zarządzane ze stacji administratora](20-microsoft365/10-onprem-identity/ad_setup.md)
+- [Diagnostyka DHCP i DNS po promocji do DC](10-admin/windows/active-directory/dhcp-not-working-after-dc-promotion.md)
 
-- Develop practical Linux and Windows system administration skills
-- Gain hands-on experience with system configuration, services, and troubleshooting
-- Learn to analyze system logs in both Linux and Windows environments
-- Understand infrastructure, networking, and security fundamentals
-- Understand system processes, services, and internal operating system mechanisms
-- Learn how to analyze system logs and detect abnormal or suspicious activity
-- Gain hands-on experience working with SSH, cron jobs, and system configurations
-- Build and manage a structured virtual lab environment
-- Document technical knowledge and practical exercises in a structured format
-- Create a professional technical portfolio for entry-level IT, system administration, and cybersecurity roles
+### Microsoft 365, Entra ID i Intune
 
----
+- [Synchronizacja AD z Entra ID](20-microsoft365/20-hybrid-identity/ad-connect-sync.md)
+- [Użytkownicy, licencje i dostęp do usług](20-microsoft365/10-user-management/user-management.md)
+- [Conditional Access i MFA](20-microsoft365/30-security/conditional-access-mfa/conditional-access-mfa.md)
+- [Intune i dostęp z urządzeń zgodnych oraz niezarządzanych](20-microsoft365/30-security/conditional-access-compliant-device/conditional-access-compliant-device.md)
 
-## Lab Environment
+### Linux
 
-This lab environment is built using virtual machines and includes:
+- [Uprawnienia i SUID — wykonane ćwiczenie](10-admin/linux/linux-file-permissions.md)
+- [Uprawnienia, SUID, SGID i sticky bit — krótka ściąga](10-admin/linux/file-permissions.md)
 
-- Ubuntu Server — system administration practice
-- Kali Linux — security analysis and investigation exercises
-- VirtualBox — virtualization and isolated environment management
-- Windows host system
+### Sieci i dostęp zdalny
 
-The lab simulates real-world infrastructure environments, allowing safe experimentation, system analysis, and troubleshooting without affecting production systems.
+- [Środowisko VirtualBox i plan sieci](10-admin/lab-virtualization/README.md)
+- [Instalacja i konfiguracja serwera OpenVPN](30-vpn/10-openvpn-server-setup/openvpn-setup.md)
+- [Profil klienta i połączenie VPN](30-vpn/20-openvpn-client/client-setup.md)
+- [Routing, NAT i test dostępu do lab-net](30-vpn/30-network-access/network-access.md)
 
----
+## Materiały uzupełniające
 
-## 📁 Repository Structure
+- [Odzyskanie dostępu do własnej maszyny Windows i wnioski o ochronie dysku](10-admin/windows/password-recovery-utilman-exploit.md)
+- [Notatki Blue Team i playbooki](20-blue-team/README.md)
+- [Notatki do ISC2 CC](certifications/isc2-cc/)
+- [Git — używane polecenia](40-toolbox/commands/git.md)
+- [Dalszy plan nauki](00-meta/roadmap.md) · [Słownik](00-meta/glossary.md) · [Zasady publikowania](00-meta/opsec.md)
 
-```
+## Jak czytać repozytorium
 
-learning-admin/
-│
-├── 00-meta/               # Knowledge management and meta documentation
-│   ├── glossary.md        # My terminology glossary 
-│   ├── opsec.md           # Security and privacy guidelines
-│   ├── roadmap.md         # Learning roadmap
-│   └── templates/         # Templates for notes, reports, and labs
-│
-├── 10-admin/              # System administration 
-│   ├── windows/
-│   └── artifacts/
-│
-├── 20-pentest/            # Pentesting and security 
-│   ├── methodology.md     # My testing methodology
-│   └── labs/
-│
-├── 30-architecture/       # System architecture and design
-│   ├── diagrams/
-│   └── notes/
-│
-└── 40-toolbox/            # Cheatsheets, commands, and tools  
+Nawigacja jest po polsku; większość szczegółowych zapisów pozostaje po rosyjsku, część zawiera angielski skrót. Zrzuty przedstawiają rzeczywiste etapy ćwiczeń. Prywatne adresy IP, nazwy VM i konta testowe opisują środowisko laboratoryjne.
 
-
-Each directory contains documentation, notes, commands, and artifacts related to specific technical topics.
-
-```
----
-
-## Topics Covered
-
-This repository includes practical work and documentation related to:
-
-- Linux system administration fundamentals
-- Process monitoring and system behavior analysis
-- System log analysis and interpretation
-- SSH configuration and remote access concepts
-- Cron jobs and task scheduling mechanisms
-- System troubleshooting methodology
-- Basic cybersecurity and persistence concepts
-- Virtual lab setup and environment management
-
----
-
-## Methodology
-
-This lab follows a structured and practical learning approach.
-
-Each topic typically includes:
-
-- technical notes and explanations
-- command usage and reference examples
-- system artifacts such as logs, screenshots, and configurations
-- observations and conclusions based on practical exercises
-
-This methodology ensures both technical understanding and real hands-on experience.
-
----
-
-## Purpose of this Repository
-
-This repository serves as:
-
-- a personal Linux administration and system analysis lab
-- a structured technical knowledge base
-- a portfolio demonstrating hands-on system administration and security skills
-- a documented progression of technical learning and practical experience
-
-The focus is on building real-world skills relevant to entry-level IT roles such as:
-
-- Junior System Administrator
-- IT Support Specialist
-- SOC Analyst
-- Infrastructure Support roles
-
----
-
-## Skills Demonstrated
-
-Through this lab, I have gained practical experience with:
-
-### Linux Administration
-
-- Navigating and understanding the Linux file system
-- Managing users and permissions
-- Working with system services and processes
-- Understanding system startup and configuration mechanisms
-
-### Windows Administration
-
-* Managing local users and permissions
-* Understanding Windows services and system logs
-* Basic Active Directory concepts
-* System configuration and troubleshooting
-* Windows security fundamentals
-
-### System and Process Analysis
-
-- Identifying running processes using tools such as `ps aux`
-- Analyzing process behavior and system activity
-- Understanding process hierarchy and execution flow
-
-### Log Analysis
-
-- Reading and analyzing system logs (`/var/log/auth.log`, `syslog`)
-- Identifying suspicious or abnormal system activity
-- Understanding authentication and system events
-
-### Networking Fundamentals
-
-- Understanding TCP/IP basics
-- Working with SSH connections
-- Identifying active network connections using `ss` and `netstat`
-
-### Persistence and Security Concepts
-
-- Understanding persistence mechanisms such as cron jobs and shell configuration files
-- Identifying suspicious system behavior and unauthorized access methods
-- Applying basic incident analysis methodology
-
-### Virtualization and Lab Environment
-
-- Creating and managing virtual machines using VirtualBox
-- Setting up isolated lab environments
-- Practicing system administration in a controlled environment
-
-### Documentation and Technical Workflow
-
-- Structuring technical documentation
-- Recording commands, observations, and system artifacts
-- Maintaining a structured technical repository using Git and GitHub
-
----
-
-## Author
-
-Denys Nevskyi  
-Aspiring IT Specialist focused on Linux, system administration, and cybersecurity.
-
-# **Learning-Admin — Admin • Security • Pentest**
-
-Этот репозиторий — мой персональный журнал обучения и практики в области системного администрирования, безопасности и пентестинга.
-Это не просто конспекты, а структурированный набор знаний, лабораторных работ и артефактов, отражающих мой путь от понимания систем к их защите и тестированию.
-
----
-
-## 🎯 Цели репозитория
-
-1. **Развить фундамент администрирования** (Linux + Windows).
-2. **Понять, как системы строятся, взаимодействуют и ломаются.**
-3. **Освоить мышление пентестера, а не только инструменты.**
-4. Создать **портфолио знаний и практики**, которое можно показать работодателю.
-5. Научиться:
-
-   * структурировать информацию,
-   * документировать работу,
-   * мыслить системно (сервисы, доверие, границы, риски).
-
----
-
-## 🧠 Подход к обучению
-
-Я придерживаюсь принципа:
-
-**70% — практика (лабы, эксперименты, реальные системы)**
-**30% — теория (документация, статьи, книги, разборы).**
-
-Каждая тема должна оставлять после себя **артефакты**.
-
----
-
-## 📁 Структура репозитория
-
-```
-learning-admin/
-│
-├── 00-meta/
-│   ├── glossary.md        # Мой словарь терминов
-│   ├── opsec.md           # Правила безопасности и приватности
-│   ├── roadmap.md         # Дорожная карта обучения
-│   └── templates/         # Шаблоны заметок, отчётов и лаб
-│
-├── 10-admin/              # Системное администрирование
-│   ├── linux/
-│   ├── windows/
-│   └── artifacts/
-│
-├── 20-pentest/            # Пентест и безопасность
-│   ├── methodology.md     # Мой подход к тестированию
-│   └── labs/
-│
-├── 30-architecture/       # Системное мышление и архитектура
-│   ├── diagrams/
-│   └── notes/
-│
-└── 40-toolbox/            # Шпаргалки, команды, инструменты
-```
-
----
-
-## 📝 Правило артефактов (важно)
-
-Для **каждой темы / лаб работы** я создаю:
-
-1. **Заметку (.md)** с:
-
-   * что изучал,
-   * что делал,
-   * что понял,
-   * какие ошибки допустил.
-
-2. Папку **`artifacts/`**, где лежат:
-
-   * логи,
-   * скриншоты,
-   * конфиги,
-   * команды,
-   * диаграммы.
-
-3. В конце каждой заметки обязательно:
-
-   * ✅ **Что я понял**
-   * 🔁 **Что нужно повторить / улучшить**
-
----
-
-## 🔐 OPSEC (безопасность и приватность)
-
-Я соблюдаю следующие правила:
-
-* Не публикую реальные IP, пароли, токены, ключи.
-* Замазываю чувствительные данные на скриншотах.
-* Разделяю публичные и приватные материалы.
-* Не раскрываю детали реальных систем и клиентов.
-
----
-
-## 📚 Темы, которые я изучаю
-
-### 🔹 Администрирование
-
-* Linux:
-
-  * пользователи и группы
-  * права доступа (chmod, ACL)
-  * systemd и логи
-  * сети, сервисы, процессы
-
-* Windows:
-
-  * локальные пользователи и GPO
-  * службы и журналы
-  * основы Active Directory
-
-### 🔹 Безопасность и пентест
-
-* Разведка (OSINT + активная)
-* Сканирование (Nmap, веб-разведка)
-* Веб-безопасность (HTTP, запросы, файлы, логика)
-* Базовые уязвимости (логика, доступы, конфигурации)
-
-### 🔹 Системное мышление
-
-* Как сервисы связаны между собой
-* Где границы доверия
-* Какие риски у системы
-* Как атакующий может двигаться внутри сети
-
----
-
-## 🚀 Как использовать этот репозиторий
-
-Если ты:
-
-* студент — можешь брать структуру как пример;
-* начинающий админ — смотри раздел `10-admin`;
-* начинающий пентестер — смотри `20-pentest`;
-* работодатель — здесь виден мой реальный процесс обучения.
-
----
-
-## 📬 Контакт / обратная связь
-
-Если у тебя есть идеи, замечания или советы — буду рад фидбеку через Issues или Pull Requests.
-
----
-
-**Статус репозитория:** активно пополняется и развивается.
-**Автор:** Denys
-**Последнее обновление:** регулярно.
+Notatki teoretyczne i planowane tematy są oznaczone osobno. Sam opis procedury nie oznacza przeprowadzonego wdrożenia. Daty, wersje i wyniki w poszczególnych notatkach odnoszą się do momentu wykonania ćwiczenia.
